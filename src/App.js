@@ -32,9 +32,11 @@ function IconToolbar() {
 
 function App() {
   return (
-    <div className="app">
-      <h1>Mentionaire</h1>
-      <IconToolbar />
+    <div id="app">
+      <header id="header">
+        <h1>Mentionaire</h1>
+        <IconToolbar />
+      </header>
     </div>
   );
 }
