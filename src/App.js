@@ -17,7 +17,7 @@ function IconToolbar() {
     <IconToolbarWrapper>
       <a
         className="animated_icon_google"
-        href="https://www.google.com/search"
+        href="https://www.google.com/search?q=hello"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -25,7 +25,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_twitter"
-        href="https://twitter.com/search-advanced"
+        href="https://twitter.com/search?q=hello"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -33,7 +33,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_reddit"
-        href="https://www.reddit.com/search"
+        href="https://www.reddit.com/search/?q=hello"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -47,7 +47,14 @@ function IconToolbar() {
       >
         <i className="fab fa-facebook" />
       </a>
-      <i className="fab fa-linkedin" />
+      <a
+        className="animated_icon_linkedin"
+        href="https://www.linkedin.com/search/results/content/?keywords=hello"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-linkedin" />
+      </a>
     </IconToolbarWrapper>
   );
 }
