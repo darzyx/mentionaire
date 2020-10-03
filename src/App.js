@@ -23,7 +23,13 @@ function IconToolbar() {
       >
         <i className="fab fa-twitter animated_icon_twitter" />
       </a>
-      <i className="fab fa-reddit" />
+      <a
+        href="https://www.reddit.com/search"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-reddit animated_icon_reddit" />
+      </a>
       <i className="fab fa-facebook" />
       <i className="fab fa-linkedin" />
     </IconToolbarWrapper>
