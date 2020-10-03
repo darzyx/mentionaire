@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 function Loading() {
   return <i className="fas fa-spinner loading" />;
@@ -9,7 +9,7 @@ const IconToolbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
 
   a {
     background-color: white;
@@ -17,6 +17,14 @@ const IconToolbarWrapper = styled.div`
     height: 22px;
     width: 22px;
     transform: scale(1);
+
+    ${({ searchString }) =>
+      searchString.length < 1 &&
+      css`
+        pointer-events: none;
+        cursor: default;
+        animation: none;
+      `}
   }
 `;
 
@@ -29,7 +37,7 @@ const Form = styled.form`
 
   input {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -40,7 +48,7 @@ const Form = styled.form`
 
 function IconToolbar({ searchString }) {
   return (
-    <IconToolbarWrapper>
+    <IconToolbarWrapper searchString={searchString}>
       <a
         className="animated_icon_google"
         href={`https://www.google.com/search?q=${searchString}`}
@@ -135,7 +143,7 @@ function App() {
         {isReady ? (
           <>
             <h1>Mentionaire</h1>
-            <Form>
+            <Form autoComplete="off" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="text"
                 id="search"
