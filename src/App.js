@@ -25,9 +25,11 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   input {
-    min-width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
