@@ -7,9 +7,12 @@ const IconToolbar = styled.div`
   width: 100%;
   max-width: 300px;
 
+  a {
+    color: #333;
+  }
+
   i {
     font-size: 20px;
-    cursor: pointer;
   }
 `;
 
@@ -19,7 +22,13 @@ function App() {
       <h1>Mentionaire</h1>
       <IconToolbar>
         <i className="fab fa-google" />
-        <i className="fab fa-twitter" />
+        <a
+          href="https://twitter.com/search-advanced"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-twitter" />
+        </a>
         <i className="fab fa-reddit" />
         <i className="fab fa-facebook" />
         <i className="fab fa-linkedin" />
