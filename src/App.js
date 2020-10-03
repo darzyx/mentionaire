@@ -7,12 +7,8 @@ const IconToolbarWrapper = styled.div`
   width: 100%;
   max-width: 300px;
 
-  a {
-    color: #333;
-  }
-
   i {
-    font-size: 20px;
+    font-size: 22px;
   }
 `;
 
@@ -25,7 +21,7 @@ function IconToolbar() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-twitter" />
+        <i className="fab fa-twitter animated_icon_twitter" />
       </a>
       <i className="fab fa-reddit" />
       <i className="fab fa-facebook" />
