@@ -80,6 +80,12 @@ a, i {
   animation: pulse-facebook 2s infinite;
 }
 
+.animated_icon_github {
+  color: rgba(0, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  animation: pulse-github 2s infinite;
+}
+
 .animated_icon_yahoo {
   color: rgba(74, 0, 160, 1);
   box-shadow: 0 0 0 0 rgba(74, 0, 160, 1);
@@ -208,6 +214,23 @@ a, i {
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(66, 103, 178, 0);
+  }
+}
+
+@keyframes pulse-github {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 

@@ -96,6 +96,14 @@ function IconToolbar({ searchString }) {
         <i className="fab fa-facebook" />
       </a>
       <a
+        className="animated_icon_github"
+        href={`https://github.com/search?q=${searchString}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-github" />
+      </a>
+      <a
         className="animated_icon_yahoo"
         href={`https://search.yahoo.com/search?p=${searchString}`}
         target="_blank"
