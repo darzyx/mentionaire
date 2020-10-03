@@ -24,12 +24,28 @@ function IconToolbar() {
         <i className="fab fa-google" />
       </a>
       <a
+        className="animated_icon_youtube"
+        href="https://www.youtube.com/results?search_query=hello"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-youtube" />
+      </a>
+      <a
         className="animated_icon_twitter"
         href="https://twitter.com/search?q=hello"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i className="fab fa-twitter" />
+      </a>
+      <a
+        className="animated_icon_wikipedia"
+        href="https://en.wikipedia.org/w/index.php?search=hello"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-wikipedia-w" />
       </a>
       <a
         className="animated_icon_reddit"
@@ -46,6 +62,14 @@ function IconToolbar() {
         rel="noopener noreferrer"
       >
         <i className="fab fa-facebook" />
+      </a>
+      <a
+        className="animated_icon_yahoo"
+        href="https://search.yahoo.com/search?p=hello"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-yahoo" />
       </a>
       <a
         className="animated_icon_linkedin"

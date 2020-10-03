@@ -49,6 +49,17 @@ a, i {
   animation: pulse-google 2s infinite;
 }
 
+.animated_icon_youtube {
+  color: rgba(255, 0, 0, 1);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
+  height: 22px;
+  width: 22px;
+  transform: scale(1);
+  animation: pulse-youtube 2s infinite;
+}
+
 .animated_icon_twitter {
   color: rgba(52, 172, 224, 1);
   background-color: white;
@@ -58,6 +69,17 @@ a, i {
   width: 22px;
   transform: scale(1);
   animation: pulse-twitter 2s infinite;
+}
+
+.animated_icon_wikipedia {
+  color: rgba(0, 0, 0, 1);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  height: 22px;
+  width: 22px;
+  transform: scale(1);
+  animation: pulse-wikipedia 2s infinite;
 }
 
 .animated_icon_reddit {
@@ -80,6 +102,17 @@ a, i {
   width: 22px;
   transform: scale(1);
   animation: pulse-facebook 2s infinite;
+}
+
+.animated_icon_yahoo {
+  color: rgba(74, 0, 160, 1);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(74, 0, 160, 1);
+  height: 22px;
+  width: 22px;
+  transform: scale(1);
+  animation: pulse-yahoo 2s infinite;
 }
 
 .animated_icon_linkedin {
@@ -110,6 +143,23 @@ a, i {
   }
 }
 
+@keyframes pulse-youtube {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
 @keyframes pulse-twitter {
   0% {
       transform: scale(0.95);
@@ -124,6 +174,23 @@ a, i {
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+  }
+}
+
+@keyframes pulse-wikipedia {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -158,6 +225,23 @@ a, i {
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(66, 103, 178, 0);
+  }
+}
+
+@keyframes pulse-yahoo {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(74, 0, 160, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(74, 0, 160, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(74, 0, 160, 0);
   }
 }
 
