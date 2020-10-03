@@ -45,7 +45,7 @@ i {
   height: 22px;
   width: 22px;
   transform: scale(1);
-  animation: pulse-blue 2s infinite;
+  animation: pulse-twitter 2s infinite;
 }
 
 .animated_icon_reddit {
@@ -56,10 +56,21 @@ i {
   height: 22px;
   width: 22px;
   transform: scale(1);
-  animation: pulse-orange 2s infinite;
+  animation: pulse-reddit 2s infinite;
 }
 
-@keyframes pulse-blue {
+.animated_icon_facebook {
+  color: rgba(66,103,178, 1);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(66,103,178, 1);
+  height: 22px;
+  width: 22px;
+  transform: scale(1);
+  animation: pulse-facebook 2s infinite;
+}
+
+@keyframes pulse-twitter {
   0% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
@@ -76,7 +87,7 @@ i {
   }
 }
 
-@keyframes pulse-orange {
+@keyframes pulse-reddit {
   0% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(255, 86, 0, 0.7);
@@ -90,6 +101,23 @@ i {
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(255, 86, 0, 0);
+  }
+}
+
+@keyframes pulse-facebook {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(66,103,178, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(66,103,178, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(66,103,178, 0);
   }
 }
 
