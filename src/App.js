@@ -15,22 +15,38 @@ const IconToolbarWrapper = styled.div`
 function IconToolbar() {
   return (
     <IconToolbarWrapper>
-      <i className="fab fa-google" />
       <a
+        className="animated_icon_google"
+        href="https://www.google.com/search"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-google" />
+      </a>
+      <a
+        className="animated_icon_twitter"
         href="https://twitter.com/search-advanced"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-twitter animated_icon_twitter" />
+        <i className="fab fa-twitter" />
       </a>
       <a
+        className="animated_icon_reddit"
         href="https://www.reddit.com/search"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-reddit animated_icon_reddit" />
+        <i className="fab fa-reddit" />
       </a>
-      <i className="fab fa-facebook" />
+      <a
+        className="animated_icon_facebook"
+        href="https://www.facebook.com/search/top?q=hello"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-facebook" />
+      </a>
       <i className="fab fa-linkedin" />
     </IconToolbarWrapper>
   );
