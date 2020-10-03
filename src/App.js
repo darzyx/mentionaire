@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+function Loading() {
+  return <i className="fas fa-spinner loading" />;
+}
+
 const IconToolbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 300px;
-
-  i {
-    font-size: 22px;
-  }
 `;
 
 function IconToolbar() {
@@ -31,11 +31,19 @@ function IconToolbar() {
 }
 
 function App() {
+  const isReady = true;
+
   return (
     <div id="app">
       <header id="header">
-        <h1>Mentionaire</h1>
-        <IconToolbar />
+        {isReady ? (
+          <>
+            <h1>Mentionaire</h1>
+            <IconToolbar />
+          </>
+        ) : (
+          <Loading />
+        )}
       </header>
     </div>
   );
