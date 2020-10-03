@@ -12,6 +12,13 @@ const IconToolbarWrapper = styled.div`
   max-width: 300px;
 `;
 
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 function IconToolbar() {
   return (
     <IconToolbarWrapper>
@@ -92,6 +99,10 @@ function App() {
         {isReady ? (
           <>
             <h1>Mentionaire</h1>
+            <Form>
+              <input type="text" id="search" name="search" value="Hello" />
+            </Form>
+            <br />
             <IconToolbar />
           </>
         ) : (
