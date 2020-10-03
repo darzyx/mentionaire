@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function Loading() {
@@ -10,6 +10,14 @@ const IconToolbarWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 300px;
+
+  a {
+    background-color: white;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    transform: scale(1);
+  }
 `;
 
 const Form = styled.form`
@@ -17,14 +25,23 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  input {
+    min-width: 300px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+  }
 `;
 
-function IconToolbar() {
+function IconToolbar({ searchString }) {
   return (
     <IconToolbarWrapper>
       <a
         className="animated_icon_google"
-        href="https://www.google.com/search?q=hello"
+        href={`https://www.google.com/search?q=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -32,7 +49,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_youtube"
-        href="https://www.youtube.com/results?search_query=hello"
+        href={`https://www.youtube.com/results?search_query=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -40,7 +57,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_twitter"
-        href="https://twitter.com/search?q=hello"
+        href={`https://twitter.com/search?q=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -48,7 +65,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_wikipedia"
-        href="https://en.wikipedia.org/w/index.php?search=hello"
+        href={`https://en.wikipedia.org/w/index.php?search=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -56,15 +73,23 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_reddit"
-        href="https://www.reddit.com/search/?q=hello"
+        href={`https://www.reddit.com/search/?q=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         <i className="fab fa-reddit" />
       </a>
       <a
+        className="animated_icon_medium"
+        href={`https://medium.com/search?q=${searchString}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-medium-m" />
+      </a>
+      <a
         className="animated_icon_facebook"
-        href="https://www.facebook.com/search/top?q=hello"
+        href={`https://www.facebook.com/search/top?q=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -72,7 +97,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_yahoo"
-        href="https://search.yahoo.com/search?p=hello"
+        href={`https://search.yahoo.com/search?p=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -80,7 +105,7 @@ function IconToolbar() {
       </a>
       <a
         className="animated_icon_linkedin"
-        href="https://www.linkedin.com/search/results/content/?keywords=hello"
+        href={`https://www.linkedin.com/search/results/content/?keywords=${searchString}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -91,6 +116,7 @@ function IconToolbar() {
 }
 
 function App() {
+  const [searchString, setSearchString] = useState("");
   const isReady = true;
 
   return (
@@ -100,10 +126,18 @@ function App() {
           <>
             <h1>Mentionaire</h1>
             <Form>
-              <input type="text" id="search" name="search" value="Hello" />
+              <input
+                type="text"
+                id="search"
+                name="search"
+                autoFocus
+                placeholder="Search..."
+                value={searchString}
+                onChange={(e) => setSearchString(e.currentTarget.value)}
+              />
             </Form>
             <br />
-            <IconToolbar />
+            <IconToolbar searchString={searchString} />
           </>
         ) : (
           <Loading />

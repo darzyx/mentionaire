@@ -40,89 +40,55 @@ a, i {
 
 .animated_icon_google {
   color: rgba(219, 68, 55, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(219, 68, 55, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-google 2s infinite;
 }
 
 .animated_icon_youtube {
   color: rgba(255, 0, 0, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-youtube 2s infinite;
 }
 
 .animated_icon_twitter {
   color: rgba(52, 172, 224, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(52, 172, 224, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-twitter 2s infinite;
 }
 
 .animated_icon_wikipedia {
   color: rgba(0, 0, 0, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-wikipedia 2s infinite;
 }
 
 .animated_icon_reddit {
   color: rgba(255, 86, 0, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(255, 86, 0, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-reddit 2s infinite;
+}
+
+.animated_icon_medium {
+  color: rgba(3, 168, 124, 1);
+  box-shadow: 0 0 0 0 rgba(3, 168, 124, 1);
+  animation: pulse-medium 2s infinite;
 }
 
 .animated_icon_facebook {
   color: rgba(66, 103, 178, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(66, 103, 178, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-facebook 2s infinite;
 }
 
 .animated_icon_yahoo {
   color: rgba(74, 0, 160, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(74, 0, 160, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-yahoo 2s infinite;
 }
 
 .animated_icon_linkedin {
   color: rgba(40, 103, 178, 1);
-  background-color: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(40, 103, 178, 1);
-  height: 22px;
-  width: 22px;
-  transform: scale(1);
   animation: pulse-linkedin 2s infinite;
 }
 
@@ -208,6 +174,23 @@ a, i {
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(255, 86, 0, 0);
+  }
+}
+
+@keyframes pulse-medium {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(3, 168, 124, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(3, 168, 124, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(3, 168, 124, 0);
   }
 }
 
